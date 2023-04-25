@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import sys
 
 if(len(sys.argv) != 4):
-    print("Usage: python3 ts2csv.py <csv file> <template ts file> <output ts file>\nTemplate ts  must be the template of csv file")
+    print("Usage: python3 csv2tsv.py <csv file> <template ts file> <output ts file>\nTemplate ts  must be the template of csv file")
     exit(1)  
 
 in_csv = sys.argv[1]
