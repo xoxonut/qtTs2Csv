@@ -2,7 +2,9 @@ import openpyxl
 from lxml import etree
 
 # 讀取XML檔案並獲取根元素
-tree = etree.parse('test.ts')
+input_name = 'in'
+output_name ='out'
+tree = etree.parse(input_name)
 root = tree.getroot()
 
 # 創建一個新的XLSX工作簿
@@ -49,4 +51,4 @@ for context in root.findall("context"):
             row_num += 1
 
 # 保存XLSX檔案
-workbook.save("output.xlsx")
+workbook.save(output_name)

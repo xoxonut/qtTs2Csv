@@ -2,8 +2,10 @@ import openpyxl
 from lxml import etree
 
 # 读取XML文件并获取根元素
+input_name = 'in'
+output_name ='out'
 parser = etree.XMLParser(strip_cdata=False)
-tree = etree.parse('test.ts', parser)
+tree = etree.parse(input_name, parser)
 root = tree.getroot()
 
 # 读取XLSX文件
@@ -52,7 +54,7 @@ for row_num in range(2, worksheet.max_row + 1):
         translation.text = translation_text
 
 # 将更新后的XML树写回文件，添加xml声明和doctype
-with open("updated_xml_file.xml", "wb") as f:
+with open(output_name, "wb") as f:
     f.write(b'<?xml version="1.0" encoding="utf-8"?>\n')
     f.write(b'<!DOCTYPE TS>\n')
     f.write(etree.tostring(root, encoding="utf-8"))
