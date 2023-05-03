@@ -6,7 +6,7 @@
  template要是產生csv的ts檔(其實也不用只要source和translation對得起來就好了)  
 
 ## XLSX
-加了XLSX版本，懶得弄自己改python裡的input_name & output_name
+加了XLSX版本，改python裡的input_name & output_name
 
 # 注意事項
 要用python3跑，ts2csv產生的csv分隔符號是,所以內文的source或是translation有逗號的話排版會跑掉，請再注意一下
